@@ -31,7 +31,8 @@ int main()
 
         cout << "  Low: " << low;
         cout << "  High: " << high;
-        cout << "  Mid: " << mid << endl;
+        cout << "  Mid: " << mid; 
+        cout<< endl;
 
         if (item == data[mid])
         {
