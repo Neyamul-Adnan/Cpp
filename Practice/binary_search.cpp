@@ -3,47 +3,59 @@ using namespace std;
 
 int main()
 {
-    
-    int data[16] = {4, 8, 12, 20, 30, 35, 37, 47, 59, 66, 78, 100, 112, 128, 138, 150};
-    int n = 16;
 
-    cout << "Enter item need to be searched: ";
+    int n;
+    cout << "Enter array size: ";
+    cin >> n;
+
+    cout << "Enter array elements: ";
+    int data[n];
+    for (int i = 0; i < n; i++)
+    {
+        cin >> data[i];
+    }
+
+    cout << "Now enter elements to search: ";
     int item;
     cin >> item;
 
-    bool found = false; 
+    bool found = false;
     int location;
-    
+
     int low = 0;
-    int high = n-1;
+    int high = n - 1;
     int mid;
-    while (low<=high)
+    while (low <= high)
     {
-        
-        mid = (low+high)/2;
-        if(item == data[mid]){
+        mid = (low + high) / 2;
+
+        cout << "  Low: " << low;
+        cout << "  High: " << high;
+        cout << "  Mid: " << mid << endl;
+
+        if (item == data[mid])
+        {
             found = true;
             location = mid;
             break;
         }
-        else if (item<data[mid])
+        else if (item < data[mid])
         {
-            high = mid-1;
+            high = mid - 1;
         }
-        else{
+        else
+        {
             low = mid + 1;
         }
-        
-
     }
-    if (found==true)
+    if (found == true)
     {
-        cout<<"Item found at location: "<<location;
+        cout << "Item found at location: " << location;
     }
-    else{
-        cout<<"Item not found";
+    else
+    {
+        cout << "Item not found";
     }
-    
 
     return 0;
 }
