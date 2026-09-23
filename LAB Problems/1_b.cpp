@@ -49,12 +49,13 @@ int main()
         }
     }
 
-    if (found == true){
+    if (found == true)
+    {
         cout << "Item found at location: " << location;
-}
-else
-{
-    cout << "Item not found";
-}
-return 0;
+    }
+    else
+    {
+        cout << "Item not found";
+    }
+    return 0;
 }
