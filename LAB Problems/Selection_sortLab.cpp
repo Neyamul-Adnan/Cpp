@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
 
-    int n = 5;
+    int n;
     int element[n], temp;
     srand(time(0));
 
