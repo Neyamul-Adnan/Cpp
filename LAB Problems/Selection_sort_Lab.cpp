@@ -6,11 +6,12 @@ int main()
 {
 
     int n;
-    int element[n], temp;
+    int temp;
     srand(time(0));
 
     cout << "Enter the number of elements you want to sort:";
     cin >> n;
+    
 
     for (int i = 0; i < n; i++)
     {
