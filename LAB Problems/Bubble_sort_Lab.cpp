@@ -9,38 +9,40 @@ int main()
     int element[n], temp;
     srand(time(0));
 
-    cout<<"Enter the number of elements you want to sort:";
-    cin>>n;
+    cout << "Enter the number of elements you want to sort:";
+    cin >> n;
 
-    for(int i=0; i<n; i++){
-        element[i]=rand();
+    for (int i = 0; i < n; i++)
+    {
+        element[i] = rand();
     }
-    
 
-    cout<<"The random elements are: "<<endl;
-    for(int i=0; i<n; i++){
-        cout<<" "<<element[i];
+    cout << "The random elements are: " << endl;
+    for (int i = 0; i < n; i++)
+    {
+        cout << " " << element[i];
     }
-    cout<<endl;
+    cout << endl;
 
-
-    for(int i=0; i<n-1; i++){
-        for(int j=0; j<n-1-i; j++){
-            if(element[j]>element[j+1]){
+    for (int i = 0; i < n - 1; i++)
+    {
+        for (int j = 0; j < n - 1 - i; j++)
+        {
+            if (element[j] > element[j + 1])
+            {
 
                 temp = element[j];
-                element[j]=element[j+1];
-                element[j+1]=temp;
-
+                element[j] = element[j + 1];
+                element[j + 1] = temp;
             }
         }
-
     }
 
-    cout<<"After Bubble sorting the elements are:"<<endl;
-    for(int i=0; i<n; i++){
-        //element[i]=rand();
-        cout<<" "<<element[i];
+    cout << "After Bubble sorting the elements are:" << endl;
+    for (int i = 0; i < n; i++)
+    {
+        // element[i]=rand();
+        cout << " " << element[i];
     }
 
     return 0;
