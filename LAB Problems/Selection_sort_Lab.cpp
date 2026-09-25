@@ -11,7 +11,7 @@ int main()
 
     cout << "Enter the number of elements you want to sort:";
     cin >> n;
-    
+    int element[n];
 
     for (int i = 0; i < n; i++)
     {
