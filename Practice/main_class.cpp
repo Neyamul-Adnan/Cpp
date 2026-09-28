@@ -1,5 +1,6 @@
 #include <iostream>
-#include "Node.h"
+/*LinkedList.h-এর ভেতরে আগে থেকেই #include "Node.h" করা আছে। 
+তাই main_class.cpp-তে আলাদা করে আবার #include "Node.h" করার দরকার নেই।*/
 #include "LinkedList.h"
 
 using namespace std;
@@ -17,9 +18,9 @@ int main()
     cout << "The list is " << endl;
     list->printList();
     list->deleteFirst();
-    cout << "After deleting first element:" << endl;
+    cout << endl <<"After deleting first element:" << endl;
     list->printList();
-    cout << "After deleting last element:" << endl;
+    cout << endl << "After deleting last element:" << endl;
     list->deleteLast();
     list->printList();
 

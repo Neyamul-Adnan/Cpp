@@ -14,7 +14,7 @@ public:
     Node *getNode()
     {
         Node *newNode = new Node();
-        cout << "Enter data";
+        cout << "Enter data: ";
         cin >> newNode->data;
         newNode->next = nullptr;
         return newNode;
