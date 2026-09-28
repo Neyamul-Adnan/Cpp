@@ -1,6 +1,6 @@
 
 #include <iostream>
-#include "Node.h";
+#include "Node.h"
 using namespace std;
 
 class LinkedList
