@@ -87,7 +87,12 @@ public:
         Node *temp = start;
         while (temp != nullptr)
         {
-            cout << temp->data << "->";
+            cout << temp->data;
+
+            if (temp->next != nullptr)
+            {
+                cout << "->";
+            }
             temp = temp->next;
         }
     }
