@@ -1,10 +1,3 @@
-//
-// Created by Admin on 27-Sep-26.
-//
-
-#ifndef LINKEDLIST_NODE_H
-#define LINKEDLIST_NODE_H
-
 
 class Node {
     public:
@@ -13,4 +6,4 @@ class Node {
 };
 
 
-#endif //LINKEDLIST_NODE_H
+

@@ -1,9 +1,3 @@
-//
-// Created by Admin on 27-Sep-26.
-//
-
-#ifndef LINKEDLIST_LINKEDLIST_H
-#define LINKEDLIST_LINKEDLIST_H
 
 #include <iostream>
 #include "Node.h";
@@ -82,5 +76,3 @@ class LinkedList {
 
 };
 
-
-#endif //LINKEDLIST_LINKEDLIST_H
