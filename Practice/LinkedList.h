@@ -49,8 +49,46 @@ public:
             temp->next = newNode;
         }
     }
+    int nodeCounter()
+    {
+        Node *temp = start;
+        int count = 1;
+        while (temp->next != nullptr)
+        {
+            temp = temp->next;
+            count++;
+        }
+        return count;
+    }
     void insertMiddle()
     {
+        Node *newNode = getNode();
+        if (start == nullptr)
+        {
+            start = newNode;
+        }
+        else
+        {
+            int position;
+            cout << "Enter the position";
+            cin >> position;
+            if (position > 1 && position <= nodeCounter())
+            {
+                Node *temp = start;
+                int ctr = 1;
+                while (ctr < position - 1)
+                {
+                    temp = temp->next;
+                    ctr++;
+                }
+                newNode->next = temp->next;
+                temp->next = newNode;
+            }
+            else
+            {
+                cout << "Invalid Position";
+            }
+        }
     }
     void deleteFirst()
     {
@@ -81,6 +119,32 @@ public:
     }
     void deleteMiddle()
     {
+        if (start == nullptr)
+        {
+            cout << "List is empty";
+        }
+        else
+        {
+            int position;
+            cout << "Enter the position";
+            cin >> position;
+            if (position > 1 && position <= nodeCounter())
+            {
+                Node *temp = start;
+                int ctr = 1;
+                while (ctr < position - 1)
+                {
+                    temp = temp->next;
+                    ctr++;
+                }
+
+                temp->next = temp->next->next;
+            }
+            else
+            {
+                cout << "Invalid Position";
+            }
+        }
     }
     void printList()
     {
