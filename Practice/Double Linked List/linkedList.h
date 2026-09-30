@@ -23,6 +23,7 @@ class linkedList{
         cout << "Enter data: ";
         cin >> newNode->data;
         newNode->next = nullptr;
+        newNode->pre = nullptr;
         return newNode;
     }
 
@@ -39,6 +40,20 @@ class linkedList{
             }
             temp = temp->next;
         }
+    }
+
+    void insertFirst(){
+        Node* newNode = getNode();
+        if (start == nullptr)
+        {
+            start = newNode;
+        }
+        else{
+            newNode->next = start;
+            start->pre = newNode;
+            start = newNode;
+        }
+        
     }
 
 };

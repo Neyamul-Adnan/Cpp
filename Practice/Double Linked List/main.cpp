@@ -9,7 +9,9 @@ int main()
 {
     linkedList* list = new linkedList();
 
-    list->getNode();
+    list->insertFirst();
+    list->insertFirst();
+    cout << "The list is " << endl;
     list->printList();
 
     return 0;
