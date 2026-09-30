@@ -26,4 +26,19 @@ class linkedList{
         return newNode;
     }
 
+    void printList()
+    {
+        Node *temp = start;
+        while (temp != nullptr)
+        {
+            cout << temp->data;
+
+            if (temp->next != nullptr)
+            {
+                cout << "->";
+            }
+            temp = temp->next;
+        }
+    }
+
 };

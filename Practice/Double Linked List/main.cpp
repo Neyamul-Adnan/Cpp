@@ -10,6 +10,7 @@ int main()
     linkedList* list = new linkedList();
 
     list->getNode();
+    list->printList();
 
     return 0;
 }
