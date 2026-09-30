@@ -15,13 +15,17 @@ int main()
     list->insertFirst();
     list->insertFirst();
     list->insertLast();
+    list->insertMiddle();
     cout << "The list is " << endl;
     list->printList();
     list->deleteFirst();
     cout << endl <<"After deleting first element:" << endl;
     list->printList();
-    cout << endl << "After deleting last element:" << endl;
+    list->deleteMiddle();
+    cout << endl << "After deleting middle element:" << endl;
+    list->printList();
     list->deleteLast();
+    cout << endl << "After deleting last element:" << endl;
     list->printList();
 
     return 0;

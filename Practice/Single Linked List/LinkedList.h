@@ -73,7 +73,8 @@ public:
         else
         {
             int position;
-            cout << "Enter the position";
+            cout<<endl;
+            cout << "Enter the position: ";
             cin >> position;
             if (position > 1 && position <= nodeCounter())
             {
@@ -129,7 +130,9 @@ public:
         else
         {
             int position;
-            cout << "Enter the position";
+            cout<<endl;
+            cout << "Deleting at middle ";
+            cout << "Enter the position: ";
             cin >> position;
             if (position > 1 && position <= nodeCounter())
             {
