@@ -45,8 +45,8 @@ public:
     }
 
     void insertFirst()
-    {   
-        cout<<"Insert for first ";
+    {
+        cout << "Insert for first ";
         Node *newNode = getNode();
         if (start == nullptr)
         {
@@ -61,8 +61,8 @@ public:
     }
 
     void insertLast()
-    {   
-        cout<<"Insert for last ";
+    {
+        cout << "Insert for last ";
         Node *newNode = getNode();
         if (start == nullptr)
         {
@@ -78,5 +78,17 @@ public:
             temp->next = newNode;
             newNode->pre = temp;
         }
+    }
+
+    int nodeCount()
+    {
+        Node *temp = start;
+        int count = 1;
+        while (temp->next != nullptr)
+        {
+            temp = temp->next;
+            count++;
+        }
+        return count;
     }
 };
