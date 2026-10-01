@@ -125,4 +125,15 @@ public:
         }
         
     }
+
+    void deleteFirst(){
+        if (start == nullptr)
+        {
+            cout<<"List is empty";
+        }
+        else{
+            start = start->next;
+            start->pre = nullptr;
+        }
+    }
 };

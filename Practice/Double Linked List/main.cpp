@@ -19,6 +19,10 @@ int main()
     list->insertMiddle();
     cout << "Now the list is " << endl;
     list->printList();
+    cout << endl;
+    list->deleteFirst();
+    cout << "After deleting first data: " << endl;
+    list->printList();
 
     return 0;
 }
