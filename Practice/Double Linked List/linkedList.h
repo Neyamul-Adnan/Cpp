@@ -136,4 +136,20 @@ public:
             start->pre = nullptr;
         }
     }
+
+    void deleteLast(){
+        if (start == nullptr)
+        {
+            cout<<"List is empty";
+        }
+        else{
+            Node* temp = start;
+            while (temp->next->next != nullptr)
+            {
+                temp = temp->next;
+            }
+            temp->next->pre = nullptr;
+            temp->next = nullptr;
+        }
+    }
 };

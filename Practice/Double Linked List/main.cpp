@@ -23,6 +23,10 @@ int main()
     list->deleteFirst();
     cout << "After deleting first data: " << endl;
     list->printList();
+    cout << endl;
+    list->deleteLast();
+    cout << "After deleting last data: " << endl;
+    list->printList();
 
     return 0;
 }
