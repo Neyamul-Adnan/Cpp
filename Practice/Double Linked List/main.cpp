@@ -13,6 +13,9 @@ int main()
     list->insertFirst();
     cout << "The list is " << endl;
     list->printList();
+    list->insertLast();
+    cout << "Now the list is " << endl;
+    list->printList();
 
     return 0;
 }

@@ -1,4 +1,4 @@
-#include<iostream>
+#include <iostream>
 
 using namespace std;
 
@@ -10,16 +10,18 @@ public:
     Node *pre;
 };
 
-class linkedList{
-    public:
-
-    Node* start;
-    linkedList(){
+class linkedList
+{
+public:
+    Node *start;
+    linkedList()
+    {
         start = nullptr;
     }
 
-    Node* getNode(){
-        Node* newNode = new Node();
+    Node *getNode()
+    {
+        Node *newNode = new Node();
         cout << "Enter data: ";
         cin >> newNode->data;
         newNode->next = nullptr;
@@ -42,18 +44,37 @@ class linkedList{
         }
     }
 
-    void insertFirst(){
-        Node* newNode = getNode();
+    void insertFirst()
+    {
+        Node *newNode = getNode();
         if (start == nullptr)
         {
             start = newNode;
         }
-        else{
+        else
+        {
             newNode->next = start;
             start->pre = newNode;
             start = newNode;
         }
-        
     }
 
+    void insertLast()
+    {
+        Node *newNode = getNode();
+        if (start == nullptr)
+        {
+            start = newNode;
+        }
+        else
+        {
+            Node *temp = getNode();
+            while (temp->next != nullptr)
+            {
+                temp = temp->next;
+            }
+            temp->next = newNode;
+            newNode->pre = temp;
+        }
+    }
 };
