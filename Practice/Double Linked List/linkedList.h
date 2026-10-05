@@ -152,4 +152,36 @@ public:
             temp->next = nullptr;
         }
     }
+
+    void deleteMiddle()
+    {
+        if (start == nullptr)
+        {
+            cout << "List is empty" << endl;
+        }
+
+        int position;
+        cout << "Enter the position to delete: ";
+        cin >> position;
+
+        if (position > 1 && position <= nodeCount())
+        {
+            Node *temp = start;
+            int ctr = 1;
+
+            while (ctr < position)
+            {
+                temp = temp->next;
+                ctr++;
+            }
+
+            temp->pre->next = temp->next;
+            temp->next->pre = temp->pre;
+        
+        }
+        else
+        {
+            cout << "Invalid Position" << endl;
+        }
+    }
 };
