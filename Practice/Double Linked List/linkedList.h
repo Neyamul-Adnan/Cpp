@@ -169,7 +169,7 @@ public:
             Node *temp = start;
             int ctr = 1;
 
-            while (ctr < position)
+            while (ctr < position)//targeted node e giye thame tai -1 dei nai
             {
                 temp = temp->next;
                 ctr++;
