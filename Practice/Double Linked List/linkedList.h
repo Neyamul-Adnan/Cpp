@@ -92,22 +92,24 @@ public:
         return count;
     }
 
-    void insertMiddle(){
-        cout<<"Insert for Middle ";
-        Node* newNode = getNode();
+    void insertMiddle()
+    {
+        cout << "Insert for Middle ";
+        Node *newNode = getNode();
         if (start == nullptr)
         {
             start = newNode;
         }
-        else{
+        else
+        {
             int position;
-            cout<<"Enter the position: ";
-            cin>>position;
-            if (position>1 && position <= nodeCount())
+            cout << "Enter the position: ";
+            cin >> position;
+            if (position > 1 && position <= nodeCount())
             {
-                Node* temp = start;
+                Node *temp = start;
                 int ctr = 1;
-                while (ctr < position -1)
+                while (ctr < position - 1)
                 {
                     temp = temp->next;
                     ctr++;
@@ -116,34 +118,36 @@ public:
                 newNode->pre = temp;
                 temp->next->pre = newNode;
                 temp->next = newNode;
-                
             }
-            else{
-                cout<<"Invalid position";
+            else
+            {
+                cout << "Invalid position";
             }
-            
         }
-        
     }
 
-    void deleteFirst(){
+    void deleteFirst()
+    {
         if (start == nullptr)
         {
-            cout<<"List is empty";
+            cout << "List is empty";
         }
-        else{
+        else
+        {
             start = start->next;
             start->pre = nullptr;
         }
     }
 
-    void deleteLast(){
+    void deleteLast()
+    {
         if (start == nullptr)
         {
-            cout<<"List is empty";
+            cout << "List is empty";
         }
-        else{
-            Node* temp = start;
+        else
+        {
+            Node *temp = start;
             while (temp->next->next != nullptr)
             {
                 temp = temp->next;
@@ -159,29 +163,30 @@ public:
         {
             cout << "List is empty" << endl;
         }
-
-        int position;
-        cout << "Enter the position to delete: ";
-        cin >> position;
-
-        if (position > 1 && position <= nodeCount())
-        {
-            Node *temp = start;
-            int ctr = 1;
-
-            while (ctr < position)//targeted node e giye thame tai -1 dei nai
-            {
-                temp = temp->next;
-                ctr++;
-            }
-
-            temp->pre->next = temp->next;
-            temp->next->pre = temp->pre;
-        
-        }
         else
         {
-            cout << "Invalid Position" << endl;
+            int position;
+            cout << "Enter the position to delete: ";
+            cin >> position;
+
+            if (position > 1 && position <= nodeCount())
+            {
+                Node *temp = start;
+                int ctr = 1;
+
+                while (ctr < position) // targeted node e giye thame tai -1 dei nai
+                {
+                    temp = temp->next;
+                    ctr++;
+                }
+
+                temp->pre->next = temp->next;
+                temp->next->pre = temp->pre;
+            }
+            else
+            {
+                cout << "Invalid Position" << endl;
+            }
         }
     }
 };
