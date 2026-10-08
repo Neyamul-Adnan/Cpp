@@ -18,17 +18,29 @@ int main()
     for(int i = 0; i < n; i++) {
         list->insertFirst();
     }
-    cout << "The list is " << endl;
+
+    cout << "Insert an element in the middle of the list" << endl;
+    list->insertMiddle();
+    
+    cout<< "Insert an element at the end of the list" << endl;
+    list->insertLast();
+
+    cout << "So the list is " << endl;
     list->printList();
+    cout<<endl;
+
     list->deleteFirst();
     cout << endl <<"After deleting first element:" << endl;
-    list->printList();
-    list->deleteMiddle();
-    cout << endl << "After deleting middle element:" << endl;
     list->printList();
     list->deleteLast();
     cout << endl << "After deleting last element:" << endl;
     list->printList();
+    cout << endl << "Deleting middle element:" << endl;
+    list->deleteMiddle();
+    cout << endl << "After deleting middle element:" << endl;
+    list->printList();
+    
+    
 
     return 0;
 }
