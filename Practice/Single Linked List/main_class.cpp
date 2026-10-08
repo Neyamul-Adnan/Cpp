@@ -47,6 +47,7 @@ int main()
     cout << endl
          << "After deleting middle element:  ";
     list->printList();
+    cout << endl;
 
     return 0;
 }
