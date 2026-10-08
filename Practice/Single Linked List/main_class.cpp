@@ -8,14 +8,16 @@ using namespace std;
 int main()
 {
 
+    int n;
+    cout << "Enter the number of elements to insert: ";
+    cin >> n;
+    
     LinkedList *list = new LinkedList();
 
-    list->insertFirst();
-    list->insertFirst();
-    list->insertFirst();
-    list->insertFirst();
-    list->insertLast();
-    list->insertMiddle();
+    cout<< "Inserting elements in the list" << endl;
+    for(int i = 0; i < n; i++) {
+        list->insertFirst();
+    }
     cout << "The list is " << endl;
     list->printList();
     list->deleteFirst();
