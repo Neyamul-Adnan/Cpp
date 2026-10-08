@@ -14,7 +14,7 @@ int main()
     
     LinkedList *list = new LinkedList();
 
-    cout<< "Inserting elements in the list" << endl;
+    cout<< "Inserting First elements in the list" << endl;
     for(int i = 0; i < n; i++) {
         list->insertFirst();
     }
@@ -30,11 +30,13 @@ int main()
     cout<<endl;
 
     list->deleteFirst();
-    cout << endl <<"After deleting first element:" << endl;
+    cout << endl <<"After deleting first element:";
     list->printList();
+    cout<<endl;
     list->deleteLast();
     cout << endl << "After deleting last element:" << endl;
     list->printList();
+    cout<<endl;
     cout << endl << "Deleting middle element:" << endl;
     list->deleteMiddle();
     cout << endl << "After deleting middle element:" << endl;

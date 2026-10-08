@@ -21,7 +21,7 @@ public:
     }
     void insertFirst()
     {
-        cout << "Inserting at first ";
+        //cout << "Inserting at first ";
         Node *newNode = getNode();
         if (start == nullptr)
         {
@@ -35,7 +35,7 @@ public:
     }
     void insertLast()
     {
-        cout << "Inserting at last ";
+        //cout << "Inserting at last ";
         Node *newNode = getNode();
         if (start == nullptr)
         {
@@ -64,7 +64,7 @@ public:
     }
     void insertMiddle()
     {
-        cout << "Inserting at middle ";
+        //cout << "Inserting at middle ";
         Node *newNode = getNode();
         if (start == nullptr)
         {
@@ -73,7 +73,7 @@ public:
         else
         {
             int position;
-            cout<<endl;
+            //cout<<endl;
             cout << "Enter the position: ";
             cin >> position;
             if (position > 1 && position <= nodeCounter())
@@ -130,8 +130,8 @@ public:
         else
         {
             int position;
-            cout<<endl;
-            cout << "Deleting at middle ";
+            //cout<<endl;
+            //cout << "Deleting at middle ";
             cout << "Enter the position: ";
             cin >> position;
             if (position > 1 && position <= nodeCounter())
