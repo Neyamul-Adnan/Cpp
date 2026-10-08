@@ -16,7 +16,7 @@ int main()
     LinkedList *list = new LinkedList();
 
     cout << "Inserting First elements in the list" << endl;
-    for (int i = n; i > 0; i--)
+    for (int i = 0; i < n; i++)
     {
         list->insertFirst();
     }
