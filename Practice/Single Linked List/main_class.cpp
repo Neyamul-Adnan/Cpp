@@ -38,9 +38,9 @@ int main()
     cout << endl << "After deleting last element:";
     list->printList();
     cout<<endl;
-    cout << endl << "Deleting middle element:" ;
+    cout << endl << "Deleting middle element" << endl;
     list->deleteMiddle();
-    cout << endl << "After deleting middle element:" << endl;
+    cout << endl << "After deleting middle element:";
     list->printList();
     
     
