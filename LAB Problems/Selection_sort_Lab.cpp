@@ -6,6 +6,7 @@ int main()
 {
 
     int n;
+    
     int temp;
     srand(time(0));
 
