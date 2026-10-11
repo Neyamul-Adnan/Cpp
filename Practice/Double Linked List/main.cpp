@@ -13,7 +13,7 @@ int main()
     
     do
     {
-        cout << "Enter your choice: " << endl;
+         cout << "\n========== MENU ==========" << endl;
         cout << "1. Insert First" << endl;
         cout << "2. Insert Last" << endl;
         cout << "3. Insert Middle" << endl;
