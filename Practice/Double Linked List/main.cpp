@@ -26,6 +26,13 @@ int main()
         cout << "Enter your choice: ";
         cin >> choice;
 
+        switch (choice)
+        {
+            case 1:
+                list->insertFirst();
+                break;
+        }
+
         
     } while (choice != 0);
 
