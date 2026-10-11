@@ -9,10 +9,11 @@ int main()
 
     linkedList *list = new linkedList();
 
-    cout << "This is a program to implement a Double linked list" << endl;
+    
     
     do
     {
+        cout << "\nThis is a program to implement a Double linked list";
          cout << "\n========== MENU ==========" << endl;
         cout << "1. Insert First" << endl;
         cout << "2. Insert Last" << endl;
@@ -22,6 +23,7 @@ int main()
         cout << "6. Delete Middle" << endl;
         cout << "7. Print List" << endl;
         cout << "0. Exit" << endl;
+        cout << "Enter your choice: ";
         cin >> choice;
 
         
