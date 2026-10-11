@@ -31,6 +31,10 @@ int main()
             case 1:
                 list->insertFirst();
                 break;
+            
+            case 7:
+                list->printList();
+                break;
         }
 
         
