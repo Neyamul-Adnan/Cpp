@@ -9,12 +9,10 @@ int main()
 
     linkedList *list = new linkedList();
 
-    
-    
     do
     {
         cout << "\nThis is a program to implement a Double linked list";
-         cout << "\n========== MENU ==========" << endl;
+        cout << "\n========== MENU ==========" << endl;
         cout << "1. Insert First" << endl;
         cout << "2. Insert Last" << endl;
         cout << "3. Insert Middle" << endl;
@@ -28,16 +26,23 @@ int main()
 
         switch (choice)
         {
-            case 1:
-                list->insertFirst();
-                break;
-            
-            case 7:
-                list->printList();
-                break;
+        case 1:
+            list->insertFirst();
+            break;
+
+        case 2:
+            list->insertLast();
+            break;
+
+        case 3:
+            list->insertMiddle();
+            break;
+
+        case 7:
+            list->printList();
+            break;
         }
 
-        
     } while (choice != 0);
 
     return 0;
