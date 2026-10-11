@@ -5,40 +5,27 @@ using namespace std;
 
 int main()
 {
-    int n;
-    cout << "This is a program to implement a Double linked list" << endl;
-    cout << "Enter the number of elements to insert: ";
-    cin >> n;
+    int choice;
 
     linkedList *list = new linkedList();
 
-    cout << "Inserting First elements in the list" << endl;
-    for (int i = 0; i < n; i++)
+    cout << "This is a program to implement a Double linked list" << endl;
+    
+    do
     {
-        list->insertFirst();
-    }
-    cout << "The list is " << endl;
-    list->printList();
-    cout << endl;
-    list->insertLast();
-    cout << "Now the list is " << endl;
-    list->printList();
-    cout << endl;
-    list->insertMiddle();
-    cout << "Now the list is " << endl;
-    list->printList();
-    cout << endl;
-    list->deleteFirst();
-    cout << "After deleting first data: " << endl;
-    list->printList();
-    cout << endl;
-    list->deleteLast();
-    cout << "After deleting last data: " << endl;
-    list->printList();
-    cout << endl;
-    list->deleteMiddle();
-    cout << "After deleting Middle data: " << endl;
-    list->printList();
+        cout << "Enter your choice: " << endl;
+        cout << "1. Insert First" << endl;
+        cout << "2. Insert Last" << endl;
+        cout << "3. Insert Middle" << endl;
+        cout << "4. Delete First" << endl;
+        cout << "5. Delete Last" << endl;
+        cout << "6. Delete Middle" << endl;
+        cout << "7. Print List" << endl;
+        cout << "0. Exit" << endl;
+        cin >> choice;
+
+        
+    } while (choice != 0);
 
     return 0;
 }
