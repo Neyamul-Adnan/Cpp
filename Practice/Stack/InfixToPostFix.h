@@ -11,7 +11,7 @@ public:
     string expression;
     InfixToPostFix(string expression) {
         this->expression = expression;
-        this->result = "";
+        // this->result = "";
         cout << expression << endl;
     }
     string getResult() {
