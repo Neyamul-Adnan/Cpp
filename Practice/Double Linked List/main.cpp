@@ -46,6 +46,10 @@ int main()
             list->deleteLast();
             break;
 
+        case 6:
+            list->deleteMiddle();
+            break;
+
         case 7:
             list->printList();
             break;
