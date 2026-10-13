@@ -38,6 +38,14 @@ int main()
             list->insertMiddle();
             break;
 
+        case 4:
+            list->deleteFirst();
+            break;
+
+        case 5:
+            list->deleteLast();
+            break;
+
         case 7:
             list->printList();
             break;
