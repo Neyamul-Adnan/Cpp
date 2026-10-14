@@ -5,14 +5,14 @@ using namespace std;
 int main() {
     
 
-    int n,m;
+    int n1,m1,n2,m2;
 
     cout<<"Enter the number of rows of the first matrix: ";
     cin>>n;
     cout<<"Enter the number of columns of the first matrix: ";
     cin>>m;
 
-    int A[10][10], B[10][10], C[10][10];
+    int A[n][m], B[n][m], C[n][m];
 
     return 0;
 }
