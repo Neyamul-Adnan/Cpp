@@ -6,7 +6,7 @@ using namespace std;
 int main()
 {
     int n;
-    cout << "This is a program to implement a Double linked list" << endl;
+    cout << "Double linked list" << endl;
     cout << "Enter the number of elements to insert: ";
     cin >> n;
 
