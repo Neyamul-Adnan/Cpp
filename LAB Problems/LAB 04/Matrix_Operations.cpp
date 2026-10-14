@@ -17,7 +17,7 @@ int main() {
     cout<<"Enter the number of columns of the second matrix: ";
     cin>>m2;
 
-    int A[n][m], B[n][m], C[n][m];
+    int A[n1][m1], B[n2][m2], C[n1][m2];
 
     return 0;
 }
