@@ -14,6 +14,8 @@ int main() {
 
     cout<<"Enter the number of rows of the second matrix: ";
     cin>>n2;
+    cout<<"Enter the number of columns of the second matrix: ";
+    cin>>m2;
 
     int A[n][m], B[n][m], C[n][m];
 
