@@ -19,5 +19,11 @@ int main() {
 
     int A[n1][m1], B[n2][m2], C[n1][m2];
 
+    for (int i = 0; i < n1; i++)
+    {
+        /* code */
+    }
+    
+
     return 0;
 }
