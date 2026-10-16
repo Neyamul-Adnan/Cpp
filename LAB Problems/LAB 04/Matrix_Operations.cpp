@@ -23,7 +23,7 @@ int main() {
     {
         for (int j=0; j < m1; j++)
         {
-            cout<<"Enter the element A["<<i<<"]["<<j<<"]: ";
+            cout<<"Enter the element for matrix A["<<i<<"]["<<j<<"]: ";
             cin>>A[i][j];
         }
     }
