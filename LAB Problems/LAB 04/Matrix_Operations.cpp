@@ -42,7 +42,11 @@ int main()
             for (int j = 0; j < m2; j++)
             {
             
-                
+                for (int k = 0; k < m1; k++)
+                {
+                    
+                }
+
             }
 
     }
