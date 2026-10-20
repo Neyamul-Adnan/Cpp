@@ -46,5 +46,11 @@ int main()
         }
     }
 
+    // Matrix Subtraction 
+    for (int i = 0; i < n1; i++)
+     {
+        
+     }
+
     return 0;
 }
