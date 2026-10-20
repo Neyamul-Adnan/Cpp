@@ -37,15 +37,14 @@ int main()
         }
     }
 
+
+    // Matrix Addition 
     for (int i = 0; i < n1; i++)
     {
             for (int j = 0; j < m2; j++)
             {
             
-                for (int k = 0; k < m1; k++)
-                {
-                    C[i][j] += A[i][k] * B[k][j];
-                }
+               
 
             }
 
