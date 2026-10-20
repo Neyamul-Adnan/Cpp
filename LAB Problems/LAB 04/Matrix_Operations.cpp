@@ -46,14 +46,14 @@ int main()
         }
     }
 
-    // Matrix Subtraction 
+    // Matrix Subtraction
     for (int i = 0; i < n1; i++)
-     {
+    {
         for (int j = 0; j < m2; j++)
         {
             C[i][j] = A[i][j] - B[i][j];
         }
-     }
+    }
 
     return 0;
 }
