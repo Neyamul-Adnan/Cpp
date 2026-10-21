@@ -62,7 +62,7 @@ int main()
            for(int k=0; k<m1; k++){
             sum = sum + A[i][k] * B[k][j];
            }
-
+           C[i][j] = sum;
         }
     }
 
