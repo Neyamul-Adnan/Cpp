@@ -55,5 +55,10 @@ int main()
         }
     }
 
+    //Matrix Multiplication
+    for(int i=0; i<n1; i++){
+        
+    }
+
     return 0;
 }
