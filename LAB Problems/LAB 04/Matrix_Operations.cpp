@@ -73,5 +73,7 @@ int main()
         }
     }
 
+    // Display the result matrix
+
     return 0;
 }
