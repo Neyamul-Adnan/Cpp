@@ -75,6 +75,11 @@ int main()
 
     // Display the result matrix
     cout << "Resultant Matrix C: " << endl;
+    for (int i = 0; i < n1; i++)
+    {
+        
+    }
+    
 
     return 0;
 }
