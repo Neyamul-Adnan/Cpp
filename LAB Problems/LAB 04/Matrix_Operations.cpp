@@ -74,6 +74,7 @@ int main()
     }
 
     // Display the result matrix
+    cout << "Resultant Matrix C: " << endl;
 
     return 0;
 }
