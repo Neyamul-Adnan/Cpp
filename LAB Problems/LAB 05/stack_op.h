@@ -1,24 +1,26 @@
-#ifndef STACK_H
-#define STACK_H
+
+#ifndef STACK_OP_H
+#define STACK_OP_H
 
 #include <iostream>
 using namespace std;
 
 class Stack
 {
-private:
-    int stack[100];
+public:
+    int *stack;
     int top;
     int length;
 
-public:
-    Stack()
+    Stack(int size)
     {
         top = 0;
-        length = 100;
+        length = size;
+
+        stack = new int[length];
     }
 
-    // Push: Insert an item onto the stack
+    // Push
     void push(int item)
     {
         if (top == length)
@@ -29,11 +31,12 @@ public:
         {
             stack[top] = item;
             top++;
+
             cout << item << " pushed into stack." << endl;
         }
     }
 
-    // Pop: Delete the last item from the stack
+    // Pop
     void pop()
     {
         if (top == 0)
@@ -43,11 +46,12 @@ public:
         else
         {
             top--;
+
             cout << "Item popped from stack." << endl;
         }
     }
 
-    // Peek: Return the last item from the stack
+    // Peek
     void peek()
     {
         if (top == 0)
@@ -60,7 +64,7 @@ public:
         }
     }
 
-    // Print: Display all items of the stack
+    // Print
     void print()
     {
         if (top == 0)
@@ -76,6 +80,11 @@ public:
                 cout << stack[i] << endl;
             }
         }
+    }
+
+    ~Stack()
+    {
+        delete[] stack;
     }
 };
 
