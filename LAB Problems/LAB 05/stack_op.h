@@ -1,6 +1,4 @@
 
-#ifndef STACK_OP_H
-#define STACK_OP_H
 
 #include <iostream>
 using namespace std;
@@ -81,11 +79,4 @@ public:
             }
         }
     }
-
-    ~Stack()
-    {
-        delete[] stack;
-    }
 };
-
-#endif

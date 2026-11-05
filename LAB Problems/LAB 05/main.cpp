@@ -1,4 +1,3 @@
-
 #include <iostream>
 #include "stack_op.h"
 
@@ -13,41 +12,40 @@ int main()
 
     if (size <= 0)
     {
-        cout << "Invalid stack size!" << endl;
+        cout << "Invalid stack size!";
         return 0;
     }
 
-    Stack s(size);
+    Stack *s = new Stack(size);
 
-    cout << "How many elements do you want to push? ";
+    cout << "How many elements to push: ";
     cin >> n;
 
     if (n < 0 || n > size)
     {
-        cout << "Invalid number of elements!" << endl;
+        cout << "Invalid number of elements!";
+        delete s;
         return 0;
     }
 
-    // Push elements
     for (int i = 0; i < n; i++)
     {
         cout << "Enter item: ";
         cin >> item;
 
-        s.push(item);
+        s->push(item);
     }
 
-    // Pop one element
     cout << "\nAfter Pop:" << endl;
-    s.pop();
+    s->pop();
 
-    // Peek top element
     cout << "\nAfter Peek:" << endl;
-    s.peek();
+    s->peek();
 
-    // Print all elements
     cout << "\nAfter Print:" << endl;
-    s.print();
+    s->print();
+
+    delete s;
 
     return 0;
 }
