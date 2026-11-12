@@ -3,16 +3,14 @@
 
 using namespace std;
 
-int main()
-{
+int main() {
     int size, n, item;
-
+    
     cout << "Enter stack size: ";
     cin >> size;
-
-    if (size <= 0)
-    {
-        cout << "Invalid stack size!";
+    
+    if (size <= 0) {
+        cout << "Invalid stack size!" << endl;
         return 0;
     }
 
@@ -20,32 +18,30 @@ int main()
 
     cout << "How many elements to push: ";
     cin >> n;
-
-    if (n < 0 || n > size)
-    {
-        cout << "Invalid number of elements!";
+    
+    if (n < 0 || n > size) {
+        cout << "Invalid number of elements!" << endl;
         delete s;
         return 0;
     }
 
-    for (int i = 0; i < n; i++)
-    {
+    for (int i = 0; i < n; i++) {
         cout << "Enter item: ";
         cin >> item;
-
         s->push(item);
     }
 
+    cout << "\nAfter Insert" << endl;
+    s->print();
+
     cout << "\nAfter Pop:" << endl;
     s->pop();
+    s->print();
 
     cout << "\nAfter Peek:" << endl;
     s->peek();
-
-    cout << "\nAfter Print:" << endl;
     s->print();
 
-    delete s;
-
+    
     return 0;
 }
