@@ -1,36 +1,37 @@
-#include<iostream>
-#include<string>
-#include"Recursion.h"
+#include <iostream>
+#include <string>
+#include "Recursion.h"
 using namespace std;
 
-int main(){
+int main()
+{
 
-   cout<<"Enter a number: ";
+   cout << "Enter a number: ";
    int num;
-   cin>>num;
-   cout<<"The factorial of "<<num<<" is "<<factorial(num)<<endl;
+   cin >> num;
+   cout << "The factorial of " << num << " is " << factorial(num) << endl;
 
-   cout<<"The fibonacci of "<<num<<" is "<<fibo(num)<<endl;
+   cout << "The fibonacci of " << num << " is " << fibo(num) << endl;
 
    string word;
-   cout<<"Enter a Word: ";
-   cin>>word;
+   cout << "Enter a Word: ";
+   cin >> word;
 
-   if(palindrome(word)){
-    cout<<"This word is Palindrome";
+   if (palindrome(word))
+   {
+      cout << "This word is Palindrome" << endl;
    }
-   else{
-    cout<<"This word is not Palindrome";
+   else
+   {
+      cout << "This word is not Palindrome" << endl;
    }
 
-   cout<<"Numbers 1 to 100 in reverse order: "<<endl;
+   cout << "Numbers 1 to 100 in reverse order: " << endl;
    printNum(100);
-
-   cout<<"Print Java 100 times: "<<endl;
+   cout << endl;
+   
+   cout << "Print Java 100 times: " << endl;
    printJava(100);
 
-   
-
    return 0;
-
 }

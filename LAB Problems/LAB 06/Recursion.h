@@ -32,7 +32,7 @@ using namespace std;
 
     void printJava(int n){
         if(n>0){
-            cout<<"Java";
+            cout<<"Java ";
             printJava(n-1);
         }
     }
