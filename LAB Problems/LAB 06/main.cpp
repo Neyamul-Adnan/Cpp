@@ -5,9 +5,12 @@ using namespace std;
 
 int main(){
 
-   cout<<"Factorial: "<<factorial(5)<<endl;
+   cout<<"Enter a number: ";
+   int num;
+   cin>>num;
+   cout<<"The factorial of "<<num<<" is "<<factorial(num)<<endl;
 
-   cout<<"Fibonacci: "<<fibo(6)<<endl;
+   cout<<"The fibonacci of "<<num<<" is "<<fibo(num)<<endl;
 
    cout<<"Reverse Number: ";
    printNum(100);
