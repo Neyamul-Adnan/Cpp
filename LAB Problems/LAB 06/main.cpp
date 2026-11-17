@@ -12,12 +12,6 @@ int main(){
 
    cout<<"The fibonacci of "<<num<<" is "<<fibo(num)<<endl;
 
-   cout<<"Reverse Number: ";
-   printNum(100);
-
-   cout<<"Print Java: ";
-   printJava(100);
-
    string word;
    cout<<"Enter a Word: ";
    cin>>word;
@@ -28,6 +22,14 @@ int main(){
    else{
     cout<<"This word is not Palindrome";
    }
+
+   cout<<"Numbers 1 to 100 in reverse order: "<<endl;
+   printNum(100);
+
+   cout<<"Print Java 100 times: "<<endl;
+   printJava(100);
+
+   
 
    return 0;
 
