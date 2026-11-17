@@ -29,7 +29,7 @@ int main()
    cout << "Numbers 1 to 100 in reverse order: " << endl;
    printNum(100);
    cout << endl;
-   
+
    cout << "Print Java 100 times: " << endl;
    printJava(100);
 
