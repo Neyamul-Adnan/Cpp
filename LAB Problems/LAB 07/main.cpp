@@ -1,73 +1,61 @@
 #include <iostream>
-#include "bst.h"
+#include "BST.h"
 using namespace std;
 
-int main() {
-    Node* root = nullptr;
+int main()
+{
+    Node *root = nullptr;
     int choice;
 
-    do {
-        cout << "\n--- Binary Search Tree (BST) Operations ---\n";
-        cout << "1. Insert\n";
-        cout << "2. Delete\n";
-        cout << "3. Search\n";
-        cout << "4. Pre-order Traversal\n";
-        cout << "5. In-order Traversal\n";
-        cout << "6. Post-order Traversal\n";
-        cout << "7. Level-order Traversal\n";
-        cout << "0. Exit\n";
-        cout << "Enter your choice: ";
-        cin >> choice;
+    cout << "\n  Binary Search Tree (BST)  \n";
 
-        switch (choice) {
-            case 1:
-                insert(root);
-                break;
+    for (int i = 0; i <= 7; i++)
+    {
+        insert(root);
+    }
+    cout<<"Pre Order Traversal: ";
+    preOrderTraversal(root);
+    cout<<endl;
 
-            case 2:
-                deleteNode(root);
-                break;
+    cout<<"In Order Traversal: ";
+    inOrderTraversal(root);
+    cout<<endl;
 
-            case 3:
-                if (search(root)) {
-                    cout << "Item found in the BST." << endl;
-                } else {
-                    cout << "Item not found in the BST." << endl;
-                }
-                break;
+    cout<<"Post Order Traversal: ";
+    postOrderTraversal(root);
+    cout<<endl;
 
-            case 4:
-                cout << "Pre-order: ";
-                preOrderTraversal(root);
-                cout << endl;
-                break;
+    cout<<"Level Order Traversal: ";
+    levelOrderTraversal(root);
+    cout<<endl;
+    
 
-            case 5:
-                cout << "In-order: ";
-                inOrderTraversal(root);
-                cout << endl;
-                break;
+    if(search(root)){
+        cout<<"Item found";
+        cout<<endl;
+    }
+    else{
+        cout<<"Item not found";
+        cout<<endl;
+    }
+    deleteNode(root);
+    cout<<endl;
 
-            case 6:
-                cout << "Post-order: ";
-                postOrderTraversal(root);
-                cout << endl;
-                break;
+    cout<<"Pre Order Traversal: ";
+    preOrderTraversal(root);
+    cout<<endl;
 
-            case 7:
-                cout << "Level-order: ";
-                levelOrderTraversal(root);
-                cout << endl;
-                break;
+    cout<<"In Order Traversal: ";
+    inOrderTraversal(root);
+    cout<<endl;
 
-            case 0:
-                cout << "Exiting program..." << endl;
-                break;
+    cout<<"Post Order Traversal: ";
+    postOrderTraversal(root);
+    cout<<endl;
 
-            default:
-                cout << "Invalid choice! Please try again." << endl;
-        }
-    } while (choice != 0);
+    cout<<"Level Order Traversal: ";
+    levelOrderTraversal(root);
+    cout<<endl;
 
     return 0;
 }
