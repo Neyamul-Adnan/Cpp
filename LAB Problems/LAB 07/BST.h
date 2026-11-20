@@ -1,13 +1,11 @@
-#ifndef BST_H
-#define BST_H
-
 #include <iostream>
 using namespace std;
 
-struct Node {
-    int data;
-    Node* left;
-    Node* right;
+class Node{
+ public:
+   int data;
+     Node* left;
+      Node* right;
 };
 
 Node* getNode(int item) {
@@ -18,29 +16,29 @@ Node* getNode(int item) {
     return newNode;
 }
 
-// a. Insert an element into the BST
-Node* insertRecursive(Node* temp, int item) {
+Node* insertRec(Node* temp, int item) {
     if (temp == nullptr) {
         temp = getNode(item);
         return temp;
     }
-    else if (item < temp->data) {
-        temp->left = insertRecursive(temp->left, item);
+     else if (item < temp->data) {
+        temp->left = insertRec(temp->left, item);
     }
     else if (item > temp->data) {
-        temp->right = insertRecursive(temp->right, item);
+        temp->right = insertRec(temp->right, item);
     }
     return temp;
 }
 
+
 void insert(Node*& root) {
-    cout << "Enter item";
+    cout << "Enter item: ";
     int item;
     cin >> item;
-    root = insertRecursive(root, item);
+    root = insertRec(root, item);
 }
 
-// b. Delete an element from the BST
+
 int minimum(Node* temp) {
     while (temp->left != nullptr) {
         temp = temp->left;
@@ -49,12 +47,12 @@ int minimum(Node* temp) {
 }
 
 Node* deleteDataRecursive(Node* temp, int item) {
-    // Base case: tree is empty or item not found
+   
     if (temp == nullptr) {
         return nullptr;
     }
 
-    // Step 1: Search for the node to delete
+   
     if (item < temp->data) {
         temp->left = deleteDataRecursive(temp->left, item);
     }
@@ -62,15 +60,15 @@ Node* deleteDataRecursive(Node* temp, int item) {
         temp->right = deleteDataRecursive(temp->right, item);
     }
     else {
-        // Step 2: Node found handle deletion
+    
 
-        // Case 1: No child (leaf node)
+       //No child
         if (temp->left == nullptr && temp->right == nullptr) {
             delete temp;
             return nullptr;
         }
 
-        // Case 2: One child
+        //One child
         if (temp->left == nullptr) {
             Node* rightChild = temp->right;
             delete temp;
@@ -82,12 +80,9 @@ Node* deleteDataRecursive(Node* temp, int item) {
             return leftChild;
         }
 
-        // Case 3: Two children
-        // Find inorder successor (minimum in right subtree)
+        // Two children
         int successorValue = minimum(temp->right);
-        // Replace current node's data
         temp->data = successorValue;
-        // Delete the inorder successor
         temp->right = deleteDataRecursive(temp->right, successorValue);
     }
     return temp;
@@ -99,8 +94,7 @@ void deleteNode(Node*& root) {
     cin >> item;
     root = deleteDataRecursive(root, item);
 }
-
-// c. Search an element from the BST
+ 
 bool searchDataRecursive(Node* root, int item) {
     if (root == nullptr) {
         return false;
@@ -118,12 +112,12 @@ bool searchDataRecursive(Node* root, int item) {
 
 bool search(Node* root) {
     int item;
-    cout << "Enter the item you want search" << endl;
+    cout << "Enter the item you want search: " << endl;
     cin >> item;
     return searchDataRecursive(root, item);
 }
 
-// d. Tree traversal techniques (pre-order, in-order, post-order, level-order)
+
 void preOrderTraversal(Node* temp) {
     if (temp != nullptr) {
         cout << temp->data << " ";
@@ -176,5 +170,3 @@ void levelOrderTraversal(Node* root) {
         printCurrentLevel(root, i);
     }
 }
-
-#endif
