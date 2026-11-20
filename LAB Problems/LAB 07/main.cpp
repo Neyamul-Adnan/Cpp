@@ -9,7 +9,7 @@ int main()
 
     cout << "\n  Binary Search Tree (BST)  \n";
 
-    for (int i = 0; i <= 7; i++)
+    for (int i = 0; i <= 10; i++)
     {
         insert(root);
     }
@@ -41,6 +41,7 @@ int main()
     deleteNode(root);
     cout<<endl;
 
+    cout<<"After Delete: "<<endl;
     cout<<"Pre Order Traversal: ";
     preOrderTraversal(root);
     cout<<endl;

@@ -1,81 +1,94 @@
 #include <iostream>
 using namespace std;
 
-class Node{
- public:
-   int data;
-     Node* left;
-      Node* right;
+class Node
+{
+public:
+    int data;
+    Node *left;
+    Node *right;
 };
 
-Node* getNode(int item) {
-    Node* newNode = new Node();
+Node *getNode(int item)
+{
+    Node *newNode = new Node();
     newNode->data = item;
     newNode->left = nullptr;
     newNode->right = nullptr;
     return newNode;
 }
 
-Node* insertRec(Node* temp, int item) {
-    if (temp == nullptr) {
+Node *insertRec(Node *temp, int item)
+{
+    if (temp == nullptr)
+    {
         temp = getNode(item);
         return temp;
     }
-     else if (item < temp->data) {
+    else if (item < temp->data)
+    {
         temp->left = insertRec(temp->left, item);
     }
-    else if (item > temp->data) {
+    else if (item > temp->data)
+    {
         temp->right = insertRec(temp->right, item);
     }
     return temp;
 }
 
-
-void insert(Node*& root) {
+void insert(Node *&root)
+{
     cout << "Enter item: ";
     int item;
     cin >> item;
     root = insertRec(root, item);
 }
 
-
-int minimum(Node* temp) {
-    while (temp->left != nullptr) {
+int minimum(Node *temp)
+{
+    while (temp->left != nullptr)
+    {
         temp = temp->left;
     }
     return temp->data;
 }
 
-Node* deleteDataRecursive(Node* temp, int item) {
-   
-    if (temp == nullptr) {
+Node *deleteDataRecursive(Node *temp, int item)
+{
+
+    if (temp == nullptr)
+    {
         return nullptr;
     }
 
-   
-    if (item < temp->data) {
+    if (item < temp->data)
+    {
         temp->left = deleteDataRecursive(temp->left, item);
     }
-    else if (item > temp->data) {
+    else if (item > temp->data)
+    {
         temp->right = deleteDataRecursive(temp->right, item);
     }
-    else {
-    
+    else
+    {
 
-       //No child
-        if (temp->left == nullptr && temp->right == nullptr) {
+        // No child
+        if (temp->left == nullptr && temp->right == nullptr)
+        {
             delete temp;
             return nullptr;
         }
 
-        //One child
-        if (temp->left == nullptr) {
-            Node* rightChild = temp->right;
+        // One child
+        if (temp->left == nullptr)
+        {
+            Node *rightChild = temp->right;
             delete temp;
             return rightChild;
         }
-        else if (temp->right == nullptr) {
-            Node* leftChild = temp->left;
+        else if (temp->right == nullptr)
+        {
+            Node *leftChild = temp->left;
             delete temp;
             return leftChild;
         }
@@ -88,62 +101,76 @@ Node* deleteDataRecursive(Node* temp, int item) {
     return temp;
 }
 
-void deleteNode(Node*& root) {
+void deleteNode(Node *&root)
+{
     int item;
-    cout << "Enter the item you want delete" << endl;
+    cout << "Enter the item you want delete: ";
     cin >> item;
     root = deleteDataRecursive(root, item);
 }
- 
-bool searchDataRecursive(Node* root, int item) {
-    if (root == nullptr) {
+
+bool searchDataRecursive(Node *root, int item)
+{
+    if (root == nullptr)
+    {
         return false;
     }
-    else if (item < root->data) {
+    else if (item < root->data)
+    {
         return searchDataRecursive(root->left, item);
     }
-    else if (item > root->data) {
+    else if (item > root->data)
+    {
         return searchDataRecursive(root->right, item);
     }
-    else {
+    else
+    {
         return true;
     }
 }
 
-bool search(Node* root) {
+bool search(Node *root)
+{
     int item;
-    cout << "Enter the item you want search: " << endl;
+    cout << "Enter the item you want search: ";
     cin >> item;
     return searchDataRecursive(root, item);
 }
 
-
-void preOrderTraversal(Node* temp) {
-    if (temp != nullptr) {
+void preOrderTraversal(Node *temp)
+{
+    if (temp != nullptr)
+    {
         cout << temp->data << " ";
         preOrderTraversal(temp->left);
         preOrderTraversal(temp->right);
     }
 }
 
-void inOrderTraversal(Node* temp) {
-    if (temp != nullptr) {
+void inOrderTraversal(Node *temp)
+{
+    if (temp != nullptr)
+    {
         inOrderTraversal(temp->left);
         cout << temp->data << " ";
         inOrderTraversal(temp->right);
     }
 }
 
-void postOrderTraversal(Node* temp) {
-    if (temp != nullptr) {
+void postOrderTraversal(Node *temp)
+{
+    if (temp != nullptr)
+    {
         postOrderTraversal(temp->left);
         postOrderTraversal(temp->right);
         cout << temp->data << " ";
     }
 }
 
-int height(Node* temp) {
-    if (temp == nullptr) {
+int height(Node *temp)
+{
+    if (temp == nullptr)
+    {
         return 0;
     }
     int leftHeight = height(temp->left);
@@ -151,22 +178,28 @@ int height(Node* temp) {
     return (leftHeight > rightHeight ? leftHeight : rightHeight) + 1;
 }
 
-void printCurrentLevel(Node* temp, int level) {
-    if (temp == nullptr) {
+void printCurrentLevel(Node *temp, int level)
+{
+    if (temp == nullptr)
+    {
         return;
     }
-    if (level == 1) {
+    if (level == 1)
+    {
         cout << temp->data << " ";
     }
-    else if (level > 1) {
+    else if (level > 1)
+    {
         printCurrentLevel(temp->left, level - 1);
         printCurrentLevel(temp->right, level - 1);
     }
 }
 
-void levelOrderTraversal(Node* root) {
+void levelOrderTraversal(Node *root)
+{
     int h = height(root);
-    for (int i = 1; i <= h; i++) {
+    for (int i = 1; i <= h; i++)
+    {
         printCurrentLevel(root, i);
     }
 }
