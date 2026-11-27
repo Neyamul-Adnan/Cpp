@@ -47,7 +47,51 @@ using namespace std;
             }
         }
     }
-    int main()
-{
-    return 0;
-}
+
+    void insert(vector<int>& A, int item)
+    {
+        A.push_back(item);
+        heapifyUp(A, (int)A.size() - 1);
+    }
+
+    int getMax(vector<int>& A)
+    {
+        return A[0];
+    }
+
+    int extractMax(vector<int>& A)
+    {
+        if (A.empty())
+        {
+            cout << "Heap is empty" << endl;
+        }
+        int top = A[0];
+        int last = A.back();
+        A.pop_back();
+        if (!A.empty())
+        {
+            A[0] = last;
+            heapifyDown(A, (int)A.size(), 0);
+        }
+        return top;
+    }
+
+    void buildHeap(vector<int>& A)
+    {
+        int n = (int)A.size();
+        for (int i = n / 2 - 1; i >= 0; --i)
+        {
+            heapifyDown(A, n, i);
+        }
+    }
+    
+    void heapSort(vector<int>& A)
+    {
+        buildHeap(A);
+        int n = (int)A.size();
+        for (int end = n - 1; end > 0; --end)
+        {
+            swap(A[0], A[end]);
+            heapifyDown(A, end, 0);
+        }
+    }
