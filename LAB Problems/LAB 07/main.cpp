@@ -1,5 +1,5 @@
 #include <iostream>
-#include "BST.h"
+#include "BST copy.h"
 using namespace std;
 
 int main()
@@ -26,7 +26,7 @@ int main()
     cout<<endl;
 
     cout<<"Level Order Traversal: ";
-    levelOrderTraversal(root);
+    printLevelOrder(root);
     cout<<endl;
     
 
@@ -55,7 +55,7 @@ int main()
     cout<<endl;
 
     cout<<"Level Order Traversal: ";
-    levelOrderTraversal(root);
+    printLevelOrder(root);
     cout<<endl;
 
     return 0;
